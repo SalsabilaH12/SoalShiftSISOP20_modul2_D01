@@ -1,8 +1,7 @@
 # SoalShiftSisopP20_modul2_D01
 
 ## Soal 1
-**1. Buatlah program C yang menyerupai crontab untuk menjalankan script bash dengan ketentuan sebagai berikut:
-  A. Program menerima 4 argumen berupa:
+**A. Program menerima 4 argumen berupa:
   i. Detik: 0-59 atau * (any value)
   ii. Menit: 0-59 atau * (any value)
   iii. Jam: 0-23 atau * (any value)
@@ -24,7 +23,7 @@
            - Program utama harus ter-detach dari terminal
   Hint: 
            - Gunakan fitur picsum.photos untuk mendapatkan gambar dengan ukuran tertentu
-           - Epoch Unix bisa didapatkan dari time()
+           - Epoch Unix bisa didapatkan dari time()**
 ## Soal 3
 **A. Program buatan jaya harus bisa membuat dua direktori di “/home/[USER]/modul2/”. Direktori yang pertama diberi nama “indomie”, lalu
 lima detik kemudian membuat direktori yang kedua bernama “sedaap”.
