@@ -5,11 +5,11 @@
   i. Detik: 0-59 atau * (any value)
   ii. Menit: 0-59 atau * (any value)
   iii. Jam: 0-23 atau * (any value)
-  iv. Path file .sh
-  B. Program akan mengeluarkan pesan error jika argumen yang diberikan tidak sesuai
-  C. Program hanya menerima 1 config cron
-  D. Program berjalan di background (daemon)
-  E. Tidak boleh menggunakan fungsi system()
+  iv. Path file .sh** 
+**B. Program akan mengeluarkan pesan error jika argumen yang diberikan tidak sesuai**
+**C. Program hanya menerima 1 config cron**
+**D. Program berjalan di background (daemon)**
+**E. Tidak boleh menggunakan fungsi system()
   Contoh: ./program \* 34 7 /home/somi/test.sh
   Program dengan argumen seperti contoh di atas akan menjalankan script test.sh setiap detik pada jam 07:34.**
 
