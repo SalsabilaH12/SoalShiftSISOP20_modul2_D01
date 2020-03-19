@@ -145,7 +145,7 @@ else
 }
 
 ```
-- Penjelasannya sebagai berikut:
+- Penjelasan penyelesaiannya sebagai berikut:
 - Dengan menggunakan template daemon yang ada di modul
 ```
 
@@ -173,7 +173,7 @@ else
 }
 
 ```
-- Melakukan pengecekan argument 
+- Lalu melakukan pengecekan argument 
 ```
 
 if (arg1 != 5){
