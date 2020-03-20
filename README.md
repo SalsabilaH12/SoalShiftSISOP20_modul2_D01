@@ -348,3 +348,11 @@ int main (){
 
 ```
 - `cid=fork();` untuk membuat proses baru
+- `exit(EXIT_FAILURE);` Jika gagal proses akan berhenti
+- `  if(cid == 0){ char *var[] = {"mkdir","-p","/home/linuxlite/modul2/indomie",(char *)NULL};` child process untuk membuat direktori baru pada path /home/linuxlite/modul2 yang dinamakan folder indomie
+- `execv("/bin/mkdir",var);` digunakan agar process sebelumnya dapat berjalan
+-  `else{while(wait(&stat)>0);}`process selanjutnya adalah parent process sehingga child process dapat dijalankan terlebih dahulu
+-  `cid=fork();` untuk membuat proses baru
+
+
+
