@@ -347,4 +347,4 @@ int main (){
 }
 
 ```
-- cid=fork(); untuk membuat proses baru
+- `cid=fork();` untuk membuat proses baru
