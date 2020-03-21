@@ -468,7 +468,7 @@ void writeKillerB()
 - `if(strcmp(argb[1], "-b") == 0){writeKillerB();}` jika menjalankan program menggunakan argumen dengan parameter b
 - `pid = fork();` untuk membuat proses baru
 -  `exit(EXIT_FAILURE); }` Jika gagal proses akan berhenti
-- Soal 2a
+- Soal 2a :
 ```
   while(1){
     chdir(work);
@@ -491,7 +491,7 @@ void writeKillerB()
         char *argv[] = {"mkdir", folder, NULL};
         execv("/bin/mkdir", argv);
 ```
-- soal 2b
+- soal 2b :
 - `else {while((wait(&stat_2)) > 0);` untuk menunggu dan memastikan bahwa folder telah terbentuk
 - `for(i=0; i<20; i++)` melakukan looping (untuk download gambar) sebanyak 20
 - `strcpy(file, current); strcat(file, "/"); getTimestamp(file); long int sec = time(NULL)%1000 + 100;` merupakan ukuran gambar yang di download
@@ -499,7 +499,20 @@ void writeKillerB()
 - `if(cid_3 == 0){char *argv[] = {"wget", "-O", file, link, NULL};` menjalankan command wget link download tertera dalam variabel link mengunakan parameter -O untuk merename gambar hasil download sesuai dengan isi variabel file
 - `execv("/usr/bin/wget", argv);` untuk menjalankan command wget
 - `sleep(5);` jeda 5 detik sebelum process dijalankan      
-        
+- Soal 2c :
+- `if(cid_4 == 0)` jika child process yang bernama cid_4 berjalan maka snprintf(output, 1000, "%s.zip", current); menggabungkan nama folder menjadi namafolder.zip kemudian menyimpannya dalam variabel output
+- `char output[1000]; snprintf(output, 1000, "%s.zip", current); char *argv[] = {"zip", "-r", output, current, NULL};` parameter r (rekursi) agar file dalam folder juga ikut ter-zip dan terhapus setelah di-zip.
+- `while((wait(&stat_4)) > 0);char *argv[] = {"rm", "-r", current, NULL};` menjalankan command dengan parameter rm menghapus folder yang telah di zip
+- `execv("/bin/rm", argv);` untuk menjalankan command output. output merupakan namafolder.zip dan nama folder yang akan di-zip.
+-  `sleep(30);` jeda 30 detik sebelum process dijalankan
+-  `curtime = time (NULL);` untuk mengambil waktu lagi saat melalukan looping dan menyimpan dalam variabel curtime
+- `loctime = localtime (&curtime);` mengambil localtime lagi saat melalukan looping dan menyimpan dalam variabel loctime
+- Soal 2 d & e :
+-  `FILE *temp;` memberi tau bahwa pointer temp merupakan sebuah file
+-  `temp = fopen("killer.sh", "w");` membuat script bash dengan nama killer.sh dengan mode w agar file bisa di-write
+- `fputs("#!/bin/bash\n", temp);` menulis #!/bin/bash\n\n karena file tersebut merupakan bash script
+- `if(tempCid == 0){char *argv[]={"chmod", "+x", "killer.sh", NULL};` menjalankan command chmod untuk mengganti izin akses agar file bash killer.sh bisa langsung di eksekusi +x
+- `execv("/bin/chmod", argv);` untuk menjalankan command chmod
            
 ## Soal 3
 **A. Program buatan jaya harus bisa membuat dua direktori di “/home/[USER]/modul2/”. Direktori yang pertama diberi nama “indomie”, lalu
