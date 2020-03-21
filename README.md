@@ -1,4 +1,4 @@
-# SoalShiftSisopP20_modul2_D01
+# SoalShiftSisop20_modul2_D01
 
 ## Soal 1
 **A. Program menerima 4 argumen berupa:
